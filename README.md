@@ -1,136 +1,405 @@
-# ZARR - Precision, Worn Daily
+**👗 Drape Store - Style That Speaks**
+Discover Your Style. Define Your Identity.
 
-**A premium watch storefront built for a considered shopping experience.** ZARR pairs a React storefront and customer dashboard with an Express API, MongoDB, and a separate admin workspace.
+Drape Store is a modern fashion e-commerce platform designed to make online clothing shopping effortless, elegant, and enjoyable. From everyday essentials to statement outfits, Drape Store brings a curated fashion experience right to your fingertips.
 
-![React](https://img.shields.io/badge/React-19-149ECA?logo=react&logoColor=white)
-![Node.js](https://img.shields.io/badge/Node.js-Express-339933?logo=nodedotjs&logoColor=white)
-![MongoDB](https://img.shields.io/badge/Database-MongoDB-47A248?logo=mongodb&logoColor=white)
-![Vercel](https://img.shields.io/badge/Frontend-Vercel-black?logo=vercel&logoColor=white)
+Built with React, Node.js, Express, and MongoDB, the platform combines a beautiful customer-facing storefront with a powerful admin dashboard for managing products, customers, orders, and the overall shopping experience.
 
-## ✨ The experience
+<p align="center">
+<img src="https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=black" />
+<img src="https://img.shields.io/badge/Node.js-Express-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" />
+<img src="https://img.shields.io/badge/MongoDB-Database-47A248?style=for-the-badge&logo=mongodb&logoColor=white" />
+<img src="https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
+<img src="https://img.shields.io/badge/Vercel-Deployment-000000?style=for-the-badge&logo=vercel&logoColor=white" />
+</p>
 
-- Browse the watch collection, filter and sort products, and manage a cart.
-- Create an account, check out with Cash on Delivery, and manage orders, addresses, and a wishlist.
-- Use the protected admin workspace to manage products, orders, users, and customer messages.
-- Publish ZARR Journal articles from the admin workspace, with title-based slugs and optional links to original posts.
-- Authenticate with JWTs, hashed passwords, role checks, rate limits, input sanitization, and security headers.
+✨ About Drape Store
 
-## 🧭 Project map
+Fashion is more than clothing. It's a way to express who you are.
 
-| Folder | What lives there |
-| --- | --- |
-| [`client/`](client/README.md) | React storefront, account pages, admin interface, and Vercel SPA config |
-| [`server/`](server/README.md) | Express API, MongoDB models, authentication, and Socket.IO setup |
+Drape Store is built around that idea, offering a seamless online shopping experience where customers can explore collections, discover new styles, manage their shopping carts, and place orders with ease.
 
-## 🚀 Run locally
+Whether it's casual wear, everyday essentials, seasonal collections, or statement fashion, Drape Store provides a flexible foundation for a modern clothing brand.
 
-**You’ll need:** Node.js with npm, MongoDB, and a modern browser.
+🌟 Key Features
+🛍️ Shopping Experience
+Browse a curated collection of clothing and fashion products.
+Explore product details, images, descriptions, and pricing.
+Filter, sort, and discover products with ease.
+Add products to your shopping cart.
+Manage cart quantities and remove unwanted items.
+Save favorite products to a personal wishlist.
+Enjoy a responsive shopping experience across devices.
+👤 Customer Account
+Secure customer registration and login.
+JWT-based authentication.
+Personalized customer dashboard.
+Manage personal profile information.
+Update account passwords.
+Save and manage delivery addresses.
+View order history and order details.
+Track order status.
+Manage wishlist items.
+📦 Order Management
+Smooth checkout experience.
+Cash on Delivery (COD) support.
+Submit and manage customer orders.
+View order details and status.
+Cancel eligible orders.
+Admin-controlled order status updates.
+🔐 Admin Dashboard
 
-### 1. Configure and start the API
+A dedicated workspace that gives administrators control over the entire store.
 
-From the repository root, copy the example configuration:
+Add, edit, and delete clothing products.
+Manage product descriptions, prices, and image URLs.
+Manage customer accounts.
+View and manage customer orders.
+Update order statuses.
+View and manage customer messages.
+Publish and manage Drape Store Journal articles.
+Manage store content from a centralized dashboard.
+📰 Drape Store Journal
+Publish fashion-related articles and updates.
+Create articles with title-based URLs.
+Add optional links to original articles or posts.
+Manage published content through the admin workspace.
+Share fashion inspiration, styling ideas, and collection updates.
+🛡️ Security & Reliability
+JWT authentication.
+Separate customer and admin authentication secrets.
+Password hashing.
+Role-based access control.
+API rate limiting.
+Input sanitization.
+Security headers.
+Protected administrative routes.
+MongoDB-backed persistent storage.
+🧰 Tech Stack
+Technology	Purpose
+React 19	Frontend user interface
+React Router	Client-side navigation
+JavaScript	Application logic
+Node.js	Backend runtime
+Express.js	REST API
+MongoDB	Database
+Mongoose	Database modeling
+JWT	Authentication
+Socket.IO	Realtime communication
+Vercel	Frontend deployment
+CSS	Responsive styling
+📁 Project Structure
+text
+Drape-Store/
+│
+├── client/
+│   ├── public/
+│   ├── src/
+│   │   ├── assets/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── context/
+│   │   ├── hooks/
+│   │   ├── services/
+│   │   ├── styles/
+│   │   └── App.js
+│   │
+│   ├── package.json
+│   ├── vercel.json
+│   └── README.md
+│
+├── server/
+│   ├── src/
+│   │   ├── config/
+│   │   ├── controllers/
+│   │   ├── middleware/
+│   │   ├── models/
+│   │   ├── routes/
+│   │   ├── scripts/
+│   │   └── server.js
+│   │
+│   ├── .env.example
+│   └── package.json
+│
+└── README.md
 
-```powershell
+
+Note: The structure above illustrates the main application areas. Actual filenames and folders may vary depending on the repository.
+
+🚀 Getting Started
+
+Follow these steps to run Drape Store locally.
+
+Prerequisites
+
+Make sure you have installed:
+
+Node.js
+npm
+MongoDB
+Git
+A modern web browser
+1. Clone the Repository
+bash
+git clone YOUR_REPOSITORY_URL
+cd Drape-Store
+
+
+Replace YOUR_REPOSITORY_URL with your actual GitHub repository URL.
+
+2. Configure the Backend
+
+Copy the example environment file:
+
+powershell
 Copy-Item server/.env.example server/.env
-```
 
-```bash
+
+Navigate to the server directory:
+
+bash
 cd server
+
+
+Install dependencies:
+
+bash
 npm install
-npm run dev
-```
 
-Set `MONGO_URI`, `CLIENT_URL`, and two distinct JWT secrets in `server/.env`. Use a persistent MongoDB database: restarting the API should not delete database records. The API starts at `http://localhost:5000`; its health endpoint is `http://localhost:5000/api/health`.
 
-### 2. Create the first administrator
+Configure your server/.env file:
 
-Set `ADMIN_BOOTSTRAP_EMAIL` and `ADMIN_BOOTSTRAP_PASSWORD` in `server/.env`, then run this once from `server/`:
+env
+PORT=5000
+NODE_ENV=development
 
-```bash
-node src/scripts/createAdmin.js
-```
+MONGO_URI=mongodb://127.0.0.1:27017/drape-store
 
-Keep the bootstrap credentials private. Public registration creates customer accounts only.
+CLIENT_URL=http://localhost:3000
 
-### 3. Start the storefront
+JWT_SECRET=your_customer_secret
+JWT_ADMIN_SECRET=your_admin_secret
 
-In another terminal:
+JWT_USER_EXPIRES_IN=7d
+JWT_ADMIN_EXPIRES_IN=2h
 
-```bash
-cd client
-npm install
-npm start
-```
+ADMIN_BOOTSTRAP_EMAIL=admin@example.com
+ADMIN_BOOTSTRAP_PASSWORD=your_strong_password
 
-The storefront runs at `http://localhost:3000` and defaults to `http://localhost:5000/api`. Set `REACT_APP_BACKEND_URL` in the client environment to use a different API URL; include the `/api` path.
 
-## ☁️ Deploy
+Generate secure JWT secrets using:
 
-- **Frontend:** deploy `client/` as its own Vercel project. The included [`client/vercel.json`](client/vercel.json) supports client-side routes and sets asset caching and security headers.
-- **API:** deploy `server/` as a separate Vercel project with `server/` as the project root, or run it on a persistent Node.js host. Configure `MONGO_URI`, `CLIENT_URL`, `JWT_SECRET`, and `JWT_ADMIN_SECRET` in the host’s environment. `CLIENT_URL` can contain comma-separated HTTPS origins.
-- **Realtime:** Socket.IO is enabled for local development and a persistent Node.js API host. The current Vercel serverless export serves REST routes only; leave `REACT_APP_ENABLE_REALTIME` unset for that deployment.
-
-## 🔐 Environment variables
-
-The API reads these values from `server/.env` locally and from the deployment environment in production.
-
-| Variable | Purpose | Local example |
-| --- | --- | --- |
-| `PORT` | API listen port | `5000` |
-| `NODE_ENV` | Runtime mode | `development` |
-| `MONGO_URI` | MongoDB connection string | `mongodb://127.0.0.1:27017/zarr` |
-| `CLIENT_URL` | Allowed frontend origin(s) | `http://localhost:3000` |
-| `JWT_SECRET` | Customer token signing secret | Generate a unique random value |
-| `JWT_ADMIN_SECRET` | Admin token signing secret | Generate a different random value |
-| `JWT_USER_EXPIRES_IN` | Customer token lifetime | `7d` |
-| `JWT_ADMIN_EXPIRES_IN` | Admin token lifetime | `2h` |
-| `ADMIN_BOOTSTRAP_EMAIL` | First admin account email | Your admin email |
-| `ADMIN_BOOTSTRAP_PASSWORD` | First admin account password | A private, strong password |
-
-Generate each JWT secret with:
-
-```bash
+bash
 node --input-type=module -e "import { randomBytes } from 'node:crypto'; console.log(randomBytes(48).toString('hex'))"
-```
 
-Never commit `.env` files or use example credentials in production.
 
-## 🛠️ Useful commands
+Use separate generated values for customer and administrator authentication.
 
-```bash
-# Storefront production build
-cd client && npm run build
+Start the backend:
 
-# Storefront test runner
-cd client && npm test
+bash
+npm run dev
 
-# API without file watching
-cd server && npm start
-```
 
-## 📡 API at a glance
+Backend URL:
 
-All endpoints are under `/api`. Protected routes require a bearer token in the `Authorization` header.
+text
+http://localhost:5000
 
-| Area | Routes |
-| --- | --- |
-| Health | `GET /api/health` |
-| Authentication | `/api/auth/register`, `/api/auth/login`, `/api/auth/admin/login`, `/api/auth/me`, `/api/auth/logout` |
-| Products | `GET /api/products`, `GET /api/products/:id`; admin create, update, and delete routes |
-| Orders | Create, list, view, cancel, and update order status under `/api/orders` |
-| Accounts | Profile, password, wishlist, and address routes under `/api/users` |
-| Messages | Public `POST /api/messages`; admin list, read, and delete routes |
 
-## 📌 Current scope
+API health check:
 
-- Checkout currently supports Cash on Delivery; no payment gateway is connected.
-- Product photos use image URLs; image upload and media hosting are not included.
-- The API has Socket.IO events, but the admin interface does not yet consume all of them.
-- The client uses Create React App and React Router. Public page metadata updates in the browser after the app loads.
+text
+http://localhost:5000/api/health
 
-## 🛡️ Security notes
+3. Create the First Administrator
 
-- Keep production secrets and database credentials private.
-- Use separate, high-entropy customer and admin JWT secrets.
-- Restrict database network access to trusted services and serve both apps over HTTPS.
-- Remove admin bootstrap credentials from the deployment environment after creating the initial admin if they are no longer needed.
+From the server directory, run:
+
+bash
+node src/scripts/createAdmin.js
+
+
+This creates the initial administrator using the bootstrap credentials configured in your environment.
+
+Keep administrator credentials private.
+
+4. Configure the Frontend
+
+Open another terminal:
+
+bash
+cd client
+
+
+Install frontend dependencies:
+
+bash
+npm install
+
+
+If required, create a client .env file:
+
+env
+REACT_APP_BACKEND_URL=http://localhost:5000/api
+
+
+Start the frontend:
+
+bash
+npm start
+
+
+Your storefront will be available at:
+
+text
+http://localhost:3000
+
+
+You're ready to explore Drape Store!
+
+☁️ Deployment
+
+Drape Store supports separate frontend and backend deployments.
+
+Frontend — Vercel
+Import the repository into Vercel.
+Set the project root directory to client/.
+Configure the required frontend environment variables.
+Deploy the application.
+
+The project includes a Vercel configuration for client-side routing, asset caching, and security headers.
+
+Backend — Vercel or Node.js Hosting
+Configure the project root as server/ if deploying the API separately to Vercel.
+Add the required environment variables.
+Connect a persistent MongoDB database.
+Configure CLIENT_URL with your deployed frontend origin.
+Deploy the API.
+
+Important: The current Vercel serverless export supports REST routes only. Socket.IO requires a persistent Node.js server deployment.
+
+🔌 API Overview
+
+All API endpoints use the /api prefix.
+
+Module	Endpoint	Description
+Health	GET /api/health	API status
+Auth	/api/auth/register	Customer registration
+Auth	/api/auth/login	Customer login
+Auth	/api/auth/admin/login	Admin login
+Auth	/api/auth/me	Current authenticated user
+Auth	/api/auth/logout	Logout
+Products	GET /api/products	Browse clothing products
+Products	GET /api/products/:id	Product details
+Orders	/api/orders	Order management
+Users	/api/users	Customer account management
+Messages	/api/messages	Customer messages
+
+Protected endpoints require a valid bearer token in the Authorization header.
+
+Additional administrative routes support product, order, user, and message management.
+
+🛠️ Useful Development Commands
+Frontend
+bash
+cd client
+
+# Start development server
+npm start
+
+# Create production build
+npm run build
+
+# Run tests
+npm test
+
+Backend
+bash
+cd server
+
+# Start development server
+npm run dev
+
+# Start production server
+npm start
+
+📌 Current Project Scope
+
+The following are important implementation details:
+
+Checkout currently supports Cash on Delivery.
+No third-party payment gateway is connected.
+Product images are managed through image URLs.
+Image uploading and dedicated media hosting are not included.
+Socket.IO is available for supported persistent server deployments.
+The Vercel serverless backend currently serves REST endpoints only.
+Public page metadata updates in the browser after the application loads.
+🔮 Future Improvements
+
+Drape Store is designed to grow into a more complete fashion commerce platform.
+
+Potential future enhancements include:
+
+Product categories such as Men's Wear, Women's Wear, and Accessories.
+Product sizes (XS, S, M, L, XL, XXL).
+Product color variations.
+Inventory and stock management.
+Advanced product search.
+Product reviews and ratings.
+Discount codes and promotional campaigns.
+Secure online payments.
+Product image uploading and cloud storage.
+Shipping and delivery integrations.
+Email order confirmations.
+Sales analytics and reporting.
+Recently viewed products.
+Personalized product recommendations.
+Enhanced mobile shopping experience.
+🔒 Security Guidelines
+Never commit .env files.
+Use strong, randomly generated JWT secrets.
+Keep customer and administrator secrets separate.
+Use HTTPS in production.
+Restrict MongoDB access to trusted services.
+Protect administrative credentials.
+Validate and sanitize user input.
+Remove unused administrator bootstrap credentials after initial setup.
+Keep dependencies updated.
+👨‍💻 Author
+
+Created and developed by Arthur
+
+Passionate about building modern web applications, elegant interfaces, and practical digital experiences.
+
+Project: Drape Store
+Developer: Arthur
+Focus: Full-Stack Web Development
+Stack: MERN (MongoDB, Express, React, Node.js)
+🤝 Contributing
+
+Contributions, suggestions, and improvements are welcome!
+
+If you would like to contribute:
+
+Fork this repository.
+Create a new feature branch.
+Make your changes.
+Commit your improvements.
+Submit a pull request.
+
+Please ensure your changes are tested before submitting.
+
+📄 License
+
+This project is currently available for personal and educational development.
+
+Add a LICENSE file to the repository if you intend to distribute it under a specific open-source license.
+
+<p align="center">
+<strong>DRAPE STORE</strong>
+<br />
+<em>Wear Your Confidence. Define Your Style.</em>
+<br /><br />
+Made with ❤️ by Arthur
+</p>
